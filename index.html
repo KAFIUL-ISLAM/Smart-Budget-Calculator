@@ -27,27 +27,28 @@
         <div class="col-lg-6 p-5 text-center bg-light">
             <h4 class="mb-3">Income</h4>
             <label for="">Income:</label>
-            <input id="income-field" type="text" class="mb-4">
+            <input id="income-field" type="number" class="mb-4">
             <h4 class="mb-3">Expenses</h4>
             <label for="">Food:</label>
-            <input id="food-field" type="text" class="mb-2"> <br>
+            <input id="food-field" type="number" class="mb-2"> <br>
             <label for="">Rent:</label>
-            <input id="rent-field" type="text" class="mb-2"> <br>
+            <input id="rent-field" type="number" class="mb-2"> <br>
             <label for="">Clothes:</label>
-            <input id="clothes-field" type="text" class="mb-2"> <br>
+            <input id="clothes-field" type="number" class="mb-2"> <br>
             <button id="calculate-button" class="mb-4 btn btn-primary">Calculate</button>
             <h3>Total Expenses: $<span id="expenses-amount">00</span></h3>
             <h3 class="mb-5">Balance: $<span id="balance">00</span></h3>
             <label for="">Save: </label>
-            <input id="save-field" type="text" class="mb-4"> %
+            <input id="save-field" type="number" class="mb-4"> %
             <button id="save-button" class="mb-3 btn btn-primary">Save</button>
             <h3>Saving Amount: $<span id="save-amount">00</span></h3>
             <h3>Remaining Balance: $<span id="remaining-balance">00</span></h3>
+            <small id="error" style="display: none;">error</small>
         </div>
     </section>
     <!-- Footer section -->
     <footer class="text-center mt-3 bg-secondary p-4">
-<small>Created by <span><i>Al Kafiul Islam</i></span>&copy;</small>
+        <small>Created by <span><i>Al Kafiul Islam</i></span>&copy;</small>
     </footer>
     <script src="Javascript/app.js"></script>
 </body>
