@@ -10,39 +10,45 @@ function getInputValues(idName) {
 function expensesCalculation(foodCost, rentCost, clothesCost) {
     if (foodCost >= 0 && rentCost >= 0 && clothesCost >= 0) {
         const total = foodCost + rentCost + clothesCost;
+        document.getElementById('numberError').style.visibility = 'hidden';
         return total;
     }
     else {
-        document.getElementById('error').style.display = 'block';
+        document.getElementById('numberError').style.visibility = 'visible';
     }
 }
 
 function savingCalculation(income, savingPercentange) {
     if (income >= 0 && savingPercentange >= 0 && savingPercentange <= 100) {
         const savingAmount = (income * savingPercentange) / 100;
+        document.getElementById('savingError').style.visibility = 'hidden';
+
         return savingAmount;
     }
     else {
-        document.getElementById('error').style.display = 'block';
+        document.getElementById('savingError').style.visibility = 'visible';
+
     }
 }
 
 
 // Expense Calculation and Show output
 document.getElementById('calculate-button').addEventListener('click', function () {
-    const totalExpenses = document.getElementById('expenses-amount');
+    const expenses = document.getElementById('expenses-amount');
     const balance = document.getElementById('balance');
     const income = getInputValues('income-field');
 
     // Calculation and Assign Values for Output
-    const totalM = expensesCalculation(getInputValues('food-field'), getInputValues('rent-field'), getInputValues('clothes-field'));
-    if (income >= totalM && income >= 0) {
-        totalExpenses.innerText = totalM;
-        balance.innerText = income - totalM;
-        document.getElementById('error').style.display = 'none';
+    const totalExpenses = expensesCalculation(getInputValues('food-field'), getInputValues('rent-field'), getInputValues('clothes-field'));
+    if (income >= totalExpenses && income >= 0) {
+        expenses.innerText = totalExpenses;
+        balance.innerText = income - totalExpenses;
+        document.getElementById('numberError').style.visibility = 'hidden';
+
     }
     else {
-        document.getElementById('error').style.display = 'block';
+        document.getElementById('numberError').style.visibility = 'visible';
+
     }
 });
 
@@ -61,9 +67,11 @@ document.getElementById('save-button').addEventListener('click', function ()
     if (remaining >= 0) {
         save.innerText = savingAmount.toFixed(2);
         remainingBalance.innerText = remaining.toFixed(2);
-        document.getElementById('error').style.display = 'none';
+        document.getElementById('savingError').style.visibility = 'hidden';
+
     }
     else {
-        document.getElementById('error').style.display = 'block';
+        document.getElementById('savingError').style.visibility = 'visible';
+
     }
 });
