@@ -1,3 +1,6 @@
-h2{
-    visibility: ;
+.base-color {
+    color: #190E8E;
+}
+.bg-color {
+    background-color: #3b2ce6;
 }

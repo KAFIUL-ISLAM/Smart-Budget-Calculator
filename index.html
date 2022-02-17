@@ -9,15 +9,17 @@
     <!-- BootStrap Style Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Custom CSS Link -->
+        <link rel="stylesheet" href="CSS/style.css">
     <!-- FontAwesome Icon -->
     <script src="https://kit.fontawesome.com/128080fe3c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Heading Section -->
-    <section class="container-fluid my-5">
+    <section class="container-fluid py-3 bg-color mb-3">
         <div class="d-flex mx-auto justify-content-center">
-            <h1 class="text-dark">Smart Budget Calculator</h1>
+            <h1 class="text-light">Smart Budget Calculator</h1>
             <img src="images/logo.png" class="ms-2" alt="" height="" width="75px">
         </div>
     </section>
@@ -28,26 +30,26 @@
         </div>
         <div class="col-lg-6 p-5 text-center bg-light">
             <h4 class="mb-3">Income</h4>
-            <label for="">Income:</label>
+            <label for="" class="fw-bold">Income:</label>
             <input id="income-field" type="number" class="mb-4">
             <h4 class="mb-3">Expenses</h4>
-            <label for="">Food:</label>
+            <label for="" class="fw-bold">Food:</label>
             <input id="food-field" type="number" class="mb-2"> <br>
-            <label for="">Rent:</label>
+            <label for="" class="fw-bold">Rent:</label>
             <input id="rent-field" type="number" class="mb-2"> <br>
-            <label for="">Clothes:</label>
+            <label for="" class="fw-bold">Clothes:</label>
             <input id="clothes-field" type="number" class="mb-2"> <br>
             <h6 id="numberError" class="text-danger my-2" style="visibility: hidden">
                 <i class="fa-solid fa-circle-exclamation"></i>
                 Wrong input! Please recheck again. <br>
                 Note: Your expenses should be less than or equal to your income.
             </h6>
-            <button id="calculate-button" class="mb-4 btn btn-primary">Calculate</button>
+            <button id="calculate-button" class="mb-4 btn bg-color text-light fw-bold">Calculate</button>
             <h3>Total Expenses: $<span id="expenses-amount">00</span></h3>
             <h3 class="mb-5">Balance: $<span id="balance">00</span></h3>
-            <label for="">Save: </label>
+            <label for="" class="fw-bold">Save: </label>
             <input id="save-field" type="number" class="mb-4"> %
-            <button id="save-button" class="mb-3 btn btn-primary">Save</button>
+            <button id="save-button" class="mb-3 btn bg-color text-light fw-bold">Save</button>
             <h3>Saving Amount: $<span id="save-amount">00</span></h3>
             <h3>Remaining Balance: $<span id="remaining-balance">00</span></h3>
             <h6 id="savingError" class="text-danger my-2" style="visibility: hidden">
@@ -59,7 +61,7 @@
     </section>
     <!-- Footer section -->
     <footer class="text-center mt-3 bg-secondary p-4">
-        <small>Created by <span><i>Al Kafiul Islam</i></span>&copy;</small>
+        <small class="text-light">Created by <span><i>Al Kafiul Islam</i></span>&copy;</small>
     </footer>
     <script src="Javascript/app.js"></script>
 </body>
